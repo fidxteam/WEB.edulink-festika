@@ -18,8 +18,8 @@
   }
 
   let quizData =
-    allQuestions.length > 15
-      ? shuffle(allQuestions).slice(0, 15)
+    allQuestions.length > 30
+      ? shuffle(allQuestions).slice(0, 30)
       : allQuestions;
 
   // STATE
@@ -87,6 +87,15 @@
       return;
     }
 
+      const quizBox = document.getElementById("quiz-box");
+      quizBox.classList.remove("fade-in");
+      quizBox.classList.add("fade-out");
+
+      setTimeout(() => {
+          quizBox.classList.remove("fade-out");
+          quizBox.classList.add("fade-in");
+      }, 160);
+
     const q = quizData[index];
     qEl.innerText = `${index + 1}. ${q.question}`;
 
@@ -101,11 +110,15 @@
         const btn = document.createElement("button");
         btn.innerText = c;
         btn.className = "choice-btn";
+
         btn.addEventListener("click", () => {
-          document.querySelectorAll("#choices button").forEach(el => el.classList.remove("selected"));
-          btn.classList.add("selected");
+          document.querySelectorAll("#choices button").forEach(el =>
+            el.classList.remove("choice-selected")
+          );
+          btn.classList.add("choice-selected");
           selectedAnswer = c;
         });
+
         choicesEl.appendChild(btn);
       });
     } 
@@ -152,31 +165,40 @@
       choicesEl.classList.add("choice-wrong");
       setTimeout(()=> choicesEl.classList.remove("choice-wrong"), 400);
     } else {
+      btnEl.classList.remove("choice-selected"); 
       btnEl.classList.add(isCorrect ? "choice-correct" : "choice-wrong");
-      setTimeout(()=> btnEl.classList.remove(isCorrect ? "choice-correct" : "choice-wrong"), 800);
+
+      setTimeout(()=> {
+        btnEl.classList.remove(isCorrect ? "choice-correct" : "choice-wrong");
+      }, 800);
     }
   }
 
   function goNext(){
-    clearInterval(timer);
+  clearInterval(timer);
 
-    const q = quizData[index];
-    let chosen = selectedAnswer;
+  const q = quizData[index];
+  let chosen = selectedAnswer;
 
-    if (!chosen) {
-      recordAnswer(null, false);
-    } else {
-      recordAnswer(chosen, false);
-    }
+  if (!chosen) recordAnswer(null, false);
+  else recordAnswer(chosen, false);
 
-    index++;
-
-    if (index >= quizData.length) {
-      finishQuiz();
-    } else {
-      loadQuestion();
-    }
+  // Jika ada penjelasan → TAMPILKAN
+  if (q.explain){
+    showExplanation(q.explain, () => {
+      index++;
+      if (index >= quizData.length) finishQuiz();
+      else loadQuestion();
+    });
+    return;
   }
+
+  // Kalau tidak ada penjelasan → langsung lanjut
+  index++;
+  if (index >= quizData.length) finishQuiz();
+  else loadQuestion();
+}
+
 
   function goPrev(){
     if (index === 0) return;
@@ -204,6 +226,18 @@
 
     window.location.href = "result.html";
   }
+
+  function showExplanation(text, callback){
+  const box = document.getElementById("explain-box");
+  box.style.display = "block";
+  box.className = "explain-box";
+  box.innerText = text;
+
+  setTimeout(() => {
+    box.style.display = "none";
+    callback(); // lanjut soal
+  }, 3500);
+}
 
   nextBtn.addEventListener("click",()=>{
     const q = quizData[index];
