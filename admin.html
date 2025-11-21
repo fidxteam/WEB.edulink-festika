@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin - Import Soal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/admin.js"></script>
+</head>
+
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Admin — Import Soal</h1>
+      <p>Upload file JSON berformat benar untuk menambah/menimpa soal.</p>
+    </header>
+
+    <!-- IMPORT AREA -->
+    <section class="card admin-box">
+      <h3>Import Soal</h3>
+
+      <input type="file" id="import-file" accept=".json" class="input-file">
+
+      <div class="admin-actions">
+        <button id="import-btn" class="btn">Import Soal</button>
+        <button id="export-json" type="button" class="btn-outline">Ekspor JSON</button>
+        <button id="reset-to-seed" type="button" class="btn-ghost">Reset ke Soal Default</button>
+      </div>
+    </section>
+
+    <!-- PREVIEW AREA -->
+    <section class="card preview-box">
+      <h3>Preview Soal per Kategori</h3>
+      <pre id="preview-area" class="preview"></pre>
+    </section>
+
+  </main>
+</body>
+</html>

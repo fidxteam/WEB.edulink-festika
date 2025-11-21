@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EduLink | Quiz</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/quiz.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="quiz-header">
+      <h1 id="quiz-title">Category</h1>
+      <div class="meta">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="points">Points: <span id="points">0</span></div>
+      </div>
+    </header>
+
+    <div id="progress-container" class="progress-wrap">
+      <div id="progress-bar" class="progress"></div>
+    </div>
+
+    <div id="timer-wrap" class="timer-wrap">
+      <div id="timer-text">--</div>
+      <div id="timer-bar-container"><div id="timer-bar"></div></div>
+    </div>
+
+    <section id="quiz-box" class="card card-quiz">
+      <div id="question" class="question">Loading...</div>
+      <div id="choices" class="choices"></div>
+      <input id="fill-input" class="fill-input" type="text" placeholder="Type your answer..." style="display:none;" />
+
+      <div class="controls">
+        <button id="prev-btn" class="btn-ghost">Previous</button>
+        <button id="next-btn" class="btn">Next</button>
+      </div>
+    </section>
+
+    <section class="help">
+      <small>Tip: Jawab sebelum timer habis untuk dapat bonus waktu</small>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "grammar": [
+    {"type":"mc","question":"She ___ to school every morning.","choices":["go","goes","going","gone"],"answer":"goes"},
+    {"type":"fill","question":"They ___ studying English now.","answer":"are"},
+    {"type":"mc","question":"I ___ already finished the homework.","choices":["have","has","had","having"],"answer":"have"},
+    {"type":"mc","question":"The book ___ on the table.","choices":["is","are","be","were"],"answer":"is"},
+    {"type":"mc","question":"He ___ TV when I called.","choices":["watched","was watching","watches","is watching"],"answer":"was watching"},
+    {"type":"fill","question":"We ___ dinner at 7 PM yesterday.","answer":"had"},
+    {"type":"mc","question":"The students ___ the exam next week.","choices":["take","took","will take","are take"],"answer":"will take"},
+    {"type":"mc","question":"A new mall ___ built last year.","choices":["is","was","were","be"],"answer":"was"},
+    {"type":"mc","question":"My sister, ___ lives in Bali, is a teacher.","choices":["who","which","where","whom"],"answer":"who"},
+    {"type":"fill","question":"He ___ to visit his grandparents tomorrow.","answer":"plans"},
+    {"type":"mc","question":"If I ___ time, I will help you.","choices":["have","has","had","having"],"answer":"have"},
+    {"type":"mc","question":"The movie ___ interesting.","choices":["is","are","be","were"],"answer":"is"},
+    {"type":"fill","question":"I have lived here ___ 2015.","answer":"since"},
+    {"type":"mc","question":"The test was ___ than I expected.","choices":["easy","easier","easiest","most easy"],"answer":"easier"},
+    {"type":"mc","question":"He asked me ___ I knew her.","choices":["if","do","what","why"],"answer":"if"}
+  ],
+  "vocab": [
+    {"type":"mc","question":"What is the synonym of 'happy'?","choices":["sad","joyful","angry","upset"],"answer":"joyful"},
+    {"type":"fill","question":"Translate: 'rumah' = ____","answer":"house"},
+    {"type":"mc","question":"What is the antonym of 'big'?","choices":["large","huge","small","wide"],"answer":"small"},
+    {"type":"mc","question":"'Teacher' means ____","choices":["dokter","guru","petani","pilot"],"answer":"guru"},
+    {"type":"fill","question":"Translate: 'air' (minuman) = ____","answer":"water"},
+    {"type":"mc","question":"Which one is a fruit?","choices":["carrot","apple","potato","onion"],"answer":"apple"},
+    {"type":"mc","question":"The synonym of 'fast' is ____","choices":["quick","slow","late","lazy"],"answer":"quick"},
+    {"type":"fill","question":"Translate: 'kucing' = ____","answer":"cat"},
+    {"type":"mc","question":"'Expensive' means ____","choices":["murah","mahal","cepat","kotor"],"answer":"mahal"},
+    {"type":"mc","question":"'Library' is a place to ____","choices":["swim","read books","sleep","eat"],"answer":"read books"},
+    {"type":"fill","question":"Translate: 'meja' = ____","answer":"table"},
+    {"type":"mc","question":"Which one is an animal?","choices":["truck","chair","tiger","plane"],"answer":"tiger"},
+    {"type":"mc","question":"'Cold' antonym is ____","choices":["hot","cool","freeze","ice"],"answer":"hot"},
+    {"type":"fill","question":"Translate: 'jalan' = ____","answer":"road"},
+    {"type":"mc","question":"Which one is a color?","choices":["blue","spoon","door","sand"],"answer":"blue"}
+  ],
+  "reading": [
+    {"type":"mc","question":"Sarah wakes up at 5 AM every day. What time does Sarah wake up?","choices":["6 AM","5 AM","4 AM","7 AM"],"answer":"5 AM"},
+    {"type":"mc","question":"Tom bought bread and milk. What did Tom buy?","choices":["Bread and milk","Rice","Water","Fruit"],"answer":"Bread and milk"},
+    {"type":"fill","question":"John reads a book every night. John reads a _____.","answer":"book"},
+    {"type":"mc","question":"Lisa visited the zoo and saw elephants. What did Lisa see?","choices":["Dogs","Cats","Elephants","Birds"],"answer":"Elephants"},
+    {"type":"mc","question":"Mark walked to school because it was close. Why did Mark walk?","choices":["He was tired","It was close","He had a bike","It was raining"],"answer":"It was close"},
+    {"type":"fill","question":"Emma drinks ___ every morning. (context: breakfast)","answer":"milk"},
+    {"type":"mc","question":"The sun was bright, so Sam wore sunglasses. Why did Sam wear sunglasses?","choices":["It was raining","It was dark","The sun was bright","He was cold"],"answer":"The sun was bright"},
+    {"type":"mc","question":"Anna lost her keys at the park. Where did Anna lose her keys?","choices":["At home","At school","At the park","In the car"],"answer":"At the park"},
+    {"type":"fill","question":"Tom is hungry. He wants to eat ____.","answer":"food"},
+    {"type":"mc","question":"Mia studied for her test. What did Mia do?","choices":["Played","Slept","Studied","Ran"],"answer":"Studied"},
+    {"type":"mc","question":"Jake played football with his friends. What sport did Jake play?","choices":["Basketball","Tennis","Football","Badminton"],"answer":"Football"},
+    {"type":"fill","question":"Lucy went to the store to buy ____.","answer":"apples"},
+    {"type":"mc","question":"Ben watered the plants in the morning. What did Ben water?","choices":["Clothes","Plants","Shoes","Food"],"answer":"Plants"},
+    {"type":"mc","question":"Maya ate noodles for lunch. What did Maya eat?","choices":["Rice","Soup","Noodles","Cake"],"answer":"Noodles"},
+    {"type":"fill","question":"The cat slept on the ____.","answer":"sofa"}
+  ]
+}
