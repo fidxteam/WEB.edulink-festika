@@ -27,3 +27,24 @@
   </main>
 </body>
 </html>
+
+<script>
+  // Load mode from localStorage
+  const savedMode = localStorage.getItem("theme");
+  if (savedMode === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+
+  const toggle = document.getElementById("dark-toggle");
+
+  toggle.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "☀️" : "🌙";
+  });
+
+  // Set initial icon
+  if (savedMode === "dark") {
+    toggle.textContent = "☀️";
+  }
+</script>

@@ -4,12 +4,237 @@
   <meta charset="utf-8" />
   <title>EduLink | Quiz</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* ===== MODERN QUIZ PAGE STYLE ===== */
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    .quiz-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2a2a2a;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .meta div {
+      background: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Progress Bar */
+    .progress-wrap {
+      width: 100%;
+      height: 8px;
+      background: #dbe2f0;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    #progress-bar {
+      height: 8px;
+      background: linear-gradient(90deg, #4f8bff, #6bb5ff);
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* Timer */
+    .timer-wrap {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    #timer-text {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #445;
+    }
+
+    #timer-bar-container {
+      width: 100%;
+      height: 8px;
+      background: #e8edf5;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #timer-bar {
+      height: 8px;
+      width: 100%;
+      background: #ff7676;
+      transition: width 1s linear;
+    }
+
+    /* Quiz Card */
+    .card-quiz {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: 0.2s ease;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+      line-height: 1.4;
+    }
+
+    /* Choices */
+    .choices button {
+      width: 100%;
+      text-align: left;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border: 2px solid #e3e7f0;
+      border-radius: 10px;
+      background: #f9fbff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.25s;
+      font-weight: 500;
+    }
+
+    .choices button:hover {
+      border-color: #4f8bff;
+      background: #eef5ff;
+    }
+
+    .choices .selected {
+      border-color: #4f8bff;
+      background: #e6f0ff;
+      color: #1f57c3;
+      font-weight: 600;
+    }
+
+    /* Fill input */
+    .fill-input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 2px solid #d7dce6;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    /* Explanation Box */
+    #explain-box {
+      margin-top: 18px;
+      background: #f0f7ff;
+      padding: 14px;
+      border-left: 4px solid #4f8bff;
+      border-radius: 10px;
+      font-size: 15px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn, .btn-ghost {
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      transition: 0.2s ease;
+    }
+
+    .btn {
+      background: #4f8bff;
+      color: white;
+    }
+    .btn:hover {
+      background: #3c6ed6;
+    }
+
+    .btn-ghost {
+      background: #e7ebf5;
+      color: #333;
+    }
+
+    .btn-ghost:hover {
+      background: #d8deeb;
+    }
+
+    /* Helper text */
+    .help {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      .card-quiz {
+        padding: 18px;
+      }
+      .question {
+        font-size: 18px;
+      }
+      .choices button {
+        font-size: 15px;
+      }
+      .btn, .btn-ghost {
+        font-size: 15px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+
   <script defer src="assets/js/data.js"></script>
   <script defer src="assets/js/quiz.js"></script>
+
 </head>
+
 <body>
   <main class="container">
+
     <header class="quiz-header">
       <h1 id="quiz-title">Category</h1>
       <div class="meta">
@@ -29,7 +254,11 @@
 
     <section id="quiz-box" class="card card-quiz">
       <div id="question" class="question">Loading...</div>
+
       <div id="choices" class="choices"></div>
+
+      <div id="explain-box"></div>
+
       <input id="fill-input" class="fill-input" type="text" placeholder="Type your answer..." style="display:none;" />
 
       <div class="controls">
@@ -39,8 +268,30 @@
     </section>
 
     <section class="help">
-      <small>Tip: Jawab sebelum timer habis untuk dapat bonus waktu</small>
+      <small>Tip: Jawab sebelum timer habis untuk mendapat bonus waktu ⏳</small>
     </section>
   </main>
+
 </body>
 </html>
+
+<script>
+  // Load mode from localStorage
+  const savedMode = localStorage.getItem("theme");
+  if (savedMode === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+
+  const toggle = document.getElementById("dark-toggle");
+
+  toggle.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "☀️" : "🌙";
+  });
+
+  // Set initial icon
+  if (savedMode === "dark") {
+    toggle.textContent = "☀️";
+  }
+</script>

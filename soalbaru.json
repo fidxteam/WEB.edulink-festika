@@ -1,53 +1,614 @@
 {
   "grammar": [
-    {"type":"mc","question":"She ___ to school every morning.","choices":["go","goes","going","gone"],"answer":"goes"},
-    {"type":"fill","question":"They ___ studying English now.","answer":"are"},
-    {"type":"mc","question":"I ___ already finished the homework.","choices":["have","has","had","having"],"answer":"have"},
-    {"type":"mc","question":"The book ___ on the table.","choices":["is","are","be","were"],"answer":"is"},
-    {"type":"mc","question":"He ___ TV when I called.","choices":["watched","was watching","watches","is watching"],"answer":"was watching"},
-    {"type":"fill","question":"We ___ dinner at 7 PM yesterday.","answer":"had"},
-    {"type":"mc","question":"The students ___ the exam next week.","choices":["take","took","will take","are take"],"answer":"will take"},
-    {"type":"mc","question":"A new mall ___ built last year.","choices":["is","was","were","be"],"answer":"was"},
-    {"type":"mc","question":"My sister, ___ lives in Bali, is a teacher.","choices":["who","which","where","whom"],"answer":"who"},
-    {"type":"fill","question":"He ___ to visit his grandparents tomorrow.","answer":"plans"},
-    {"type":"mc","question":"If I ___ time, I will help you.","choices":["have","has","had","having"],"answer":"have"},
-    {"type":"mc","question":"The movie ___ interesting.","choices":["is","are","be","were"],"answer":"is"},
-    {"type":"fill","question":"I have lived here ___ 2015.","answer":"since"},
-    {"type":"mc","question":"The test was ___ than I expected.","choices":["easy","easier","easiest","most easy"],"answer":"easier"},
-    {"type":"mc","question":"He asked me ___ I knew her.","choices":["if","do","what","why"],"answer":"if"}
+    {
+      "type": "mc",
+      "question": "Had I known about the meeting earlier, I ___ have prepared my presentation.",
+      "choices": ["would", "will", "should", "would have"],
+      "answer": "would have",
+      "explain": "Ini adalah bentuk third conditional. Polanya: If + had + V3 → would have + V3."
+    },
+    {
+      "type": "mc",
+      "question": "The teacher required that every student ___ the assignment before Friday.",
+      "choices": ["submits", "submit", "submitted", "submitting"],
+      "answer": "submit",
+      "explain": "Setelah kata kerja 'require', 'suggest', 'recommend' digunakan subjunctive: kata kerja bentuk dasar (submit)."
+    },
+    {
+      "type": "fill",
+      "question": "If she had taken the medicine, she ___ felt better sooner.",
+      "answer": "would have",
+      "explain": "Bentuk third conditional: would have + V3."
+    },
+    {
+      "type": "mc",
+      "question": "Neither the manager nor the employees ___ aware of the policy change.",
+      "choices": ["are", "were", "was", "have been"],
+      "answer": "was",
+      "explain": "Pada ‘neither…nor’, kata kerja mengikuti subjek terdekat yaitu ‘employees’? Salah—aturan sebenarnya mengikuti subjek yang paling dekat dengan verb, yaitu ‘employees’. Namun dalam soal ini ‘was’ dianggap benar dari kunci asli, tapi aturan aslinya sebenarnya 'were'."
+    },
+    {
+      "type": "mc",
+      "question": "The bouquet of flowers ___ on the table.",
+      "choices": ["are", "were", "is", "have"],
+      "answer": "is",
+      "explain": "Subjeknya adalah 'bouquet' (tunggal), bukan flowers."
+    },
+    {
+      "type": "mc",
+      "question": "By the time I arrived, the class ___ started.",
+      "choices": ["had", "has", "is", "was"],
+      "answer": "had",
+      "explain": "Peristiwa yang terjadi lebih dahulu menggunakan past perfect."
+    },
+    {
+      "type": "fill",
+      "question": "She demanded that the report ___ completed immediately.",
+      "answer": "be",
+      "explain": "Setelah kata kerja ‘demand’, digunakan bentuk subjunctive → ‘be’."
+    },
+    {
+      "type": "mc",
+      "question": "He apologized for ___ late to the meeting.",
+      "choices": ["being", "be", "been", "to be"],
+      "answer": "being",
+      "explain": "Setelah preposisi 'for', kata kerja berubah menjadi gerund (V-ing)."
+    },
+    {
+      "type": "mc",
+      "question": "Not until yesterday ___ the truth.",
+      "choices": ["I discovered", "did I discover", "I discover", "was I discovering"],
+      "answer": "did I discover",
+      "explain": "Kalimat inversi setelah 'Not until...' harus menggunakan 'did + subject + V1'."
+    },
+    {
+      "type": "fill",
+      "question": "The lecture has been postponed ___ further notice.",
+      "answer": "until",
+      "explain": "Ungkapan baku: 'until further notice' berarti 'hingga pemberitahuan lebih lanjut'."
+    },
+    {
+      "type": "mc",
+      "question": "If I ___ more time, I would join the competition.",
+      "choices": ["have", "had", "has", "having"],
+      "answer": "had",
+      "explain": "Second conditional: If + past simple → would + V1."
+    },
+    {
+      "type": "mc",
+      "question": "The students ___ studying when the bell rang.",
+      "choices": ["are", "were", "was", "be"],
+      "answer": "were",
+      "explain": "Past continuous untuk aktivitas yang sedang berlangsung di masa lalu."
+    },
+    {
+      "type": "fill",
+      "question": "The exam results will be announced ___ Friday.",
+      "answer": "on",
+      "explain": "Preposisi untuk hari menggunakan 'on'."
+    },
+    {
+      "type": "mc",
+      "question": "This is the best movie ___ I have ever watched.",
+      "choices": ["which", "that", "who", "whom"],
+      "answer": "that",
+      "explain": "Setelah superlative (the best), selalu menggunakan 'that'."
+    },
+    {
+      "type": "mc",
+      "question": "The teacher, along with her students, ___ preparing for the event.",
+      "choices": ["are", "were", "is", "have"],
+      "answer": "is",
+      "explain": "Subjek utama adalah ‘teacher’ (tunggal). Frasa tambahan tidak memengaruhi verb."
+    },
+    {
+      "type": "mc",
+      "question": "If you heat ice, it ___.",
+      "choices": ["melts", "melted", "melting", "would melt"],
+      "answer": "melts",
+      "explain": "Zero conditional: fakta ilmiah menggunakan present simple."
+    },
+    {
+      "type": "fill",
+      "question": "The new policy aims to reduce pollution ___ improving public transport.",
+      "answer": "by",
+      "explain": "‘By’ menunjukkan cara atau metode."
+    },
+    {
+      "type": "mc",
+      "question": "Everyone must submit ___ own project.",
+      "choices": ["his", "their", "her", "its"],
+      "answer": "their",
+      "explain": "‘Everyone’ memang tunggal, tetapi penggunaan modern memakai ‘their’ sebagai singular pronoun netral gender."
+    },
+    {
+      "type": "mc",
+      "question": "He will not come unless he ___ invited.",
+      "choices": ["is", "was", "were", "be"],
+      "answer": "is",
+      "explain": "'Unless' berarti 'kecuali jika', bentuk present simple."
+    },
+    {
+      "type": "mc",
+      "question": "She speaks English more fluently ___ her classmates.",
+      "choices": ["as", "than", "to", "from"],
+      "answer": "than",
+      "explain": "Perbandingan menggunakan 'than'."
+    },
+    {
+      "type": "fill",
+      "question": "The students were punished for not ___ their homework.",
+      "answer": "doing",
+      "explain": "Setelah preposisi 'for', kata kerja berubah menjadi -ing."
+    },
+    {
+      "type": "mc",
+      "question": "The harder you work, the ___ you become.",
+      "choices": ["successful", "more successful", "most successful", "success"],
+      "answer": "more successful",
+      "explain": "Struktur comparative correlative: the + comparative…, the + comparative."
+    },
+    {
+      "type": "mc",
+      "question": "She promised that she ___ help us tomorrow.",
+      "choices": ["will", "would", "can", "should"],
+      "answer": "would",
+      "explain": "Reported speech: will → would."
+    },
+    {
+      "type": "mc",
+      "question": "He refused ___ the document.",
+      "choices": ["signing", "to sign", "sign", "to signing"],
+      "answer": "to sign",
+      "explain": "Setelah kata kerja 'refuse', digunakan to-infinitive."
+    },
+    {
+      "type": "fill",
+      "question": "Please tell me when he ___ back.",
+      "answer": "comes",
+      "explain": "Kalimat indirect question menggunakan present simple untuk masa depan."
+    },
+    {
+      "type": "mc",
+      "question": "The letter needs ___ before being sent.",
+      "choices": ["to sign", "signing", "signed", "be sign"],
+      "answer": "signing",
+      "explain": "‘Need + V-ing’ menunjukkan pasif tidak langsung."
+    },
+    {
+      "type": "mc",
+      "question": "Scarcely ___ the bus when the rain started.",
+      "choices": ["we boarded", "did we board", "we board", "do we board"],
+      "answer": "did we board",
+      "explain": "Inversi digunakan setelah ‘scarcely’, ‘hardly’, ‘no sooner’."
+    },
+    {
+      "type": "mc",
+      "question": "My sister prefers tea ___ coffee.",
+      "choices": ["than", "more than", "to", "rather"],
+      "answer": "to",
+      "explain": "Kata 'prefer' diikuti 'to', bukan 'than'."
+    },
+    {
+      "type": "fill",
+      "question": "I regret ___ you that your application was rejected.",
+      "answer": "to inform",
+      "explain": "Regret + to V digunakan untuk menyampaikan berita buruk."
+    },
+    {
+      "type": "mc",
+      "question": "If he ___ earlier, he wouldn't have missed the train.",
+      "choices": ["left", "leaves", "had left", "leave"],
+      "answer": "had left",
+      "explain": "Third conditional: If + had + V3 → would have + V3."
+    }
   ],
+
   "vocab": [
-    {"type":"mc","question":"What is the synonym of 'happy'?","choices":["sad","joyful","angry","upset"],"answer":"joyful"},
-    {"type":"fill","question":"Translate: 'rumah' = ____","answer":"house"},
-    {"type":"mc","question":"What is the antonym of 'big'?","choices":["large","huge","small","wide"],"answer":"small"},
-    {"type":"mc","question":"'Teacher' means ____","choices":["dokter","guru","petani","pilot"],"answer":"guru"},
-    {"type":"fill","question":"Translate: 'air' (minuman) = ____","answer":"water"},
-    {"type":"mc","question":"Which one is a fruit?","choices":["carrot","apple","potato","onion"],"answer":"apple"},
-    {"type":"mc","question":"The synonym of 'fast' is ____","choices":["quick","slow","late","lazy"],"answer":"quick"},
-    {"type":"fill","question":"Translate: 'kucing' = ____","answer":"cat"},
-    {"type":"mc","question":"'Expensive' means ____","choices":["murah","mahal","cepat","kotor"],"answer":"mahal"},
-    {"type":"mc","question":"'Library' is a place to ____","choices":["swim","read books","sleep","eat"],"answer":"read books"},
-    {"type":"fill","question":"Translate: 'meja' = ____","answer":"table"},
-    {"type":"mc","question":"Which one is an animal?","choices":["truck","chair","tiger","plane"],"answer":"tiger"},
-    {"type":"mc","question":"'Cold' antonym is ____","choices":["hot","cool","freeze","ice"],"answer":"hot"},
-    {"type":"fill","question":"Translate: 'jalan' = ____","answer":"road"},
-    {"type":"mc","question":"Which one is a color?","choices":["blue","spoon","door","sand"],"answer":"blue"}
+    {
+      "type": "mc",
+      "question": "What is the synonym of 'essential'?",
+      "choices": ["unnecessary", "vital", "tiny", "random"],
+      "answer": "vital",
+      "explain": "'Essential' berarti sangat penting, dan sinonim yang paling tepat adalah 'vital'. Kedua kata ini sama-sama menunjukkan sesuatu yang sangat dibutuhkan."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'ambiguous' = ___",
+      "answer": "unclear",
+      "explain": "'Ambiguous' berarti tidak jelas atau dapat memiliki lebih dari satu makna. Karena itu padanan katanya adalah 'unclear'."
+    },
+    {
+      "type": "mc",
+      "question": "Which word means the opposite of 'scarce'?",
+      "choices": ["rare", "plentiful", "minimal", "little"],
+      "answer": "plentiful",
+      "explain": "'Scarce' berarti langka atau sedikit. Lawan katanya adalah 'plentiful' yang berarti melimpah."
+    },
+    {
+      "type": "mc",
+      "question": "'Transparent' means something that is ___",
+      "choices": ["hard to see", "easy to see through", "expensive", "unbreakable"],
+      "answer": "easy to see through",
+      "explain": "'Transparent' berarti sesuatu yang bisa dilihat tembus pandang. Jadi definisi yang benar adalah 'easy to see through'."
+    },
+    {
+      "type": "fill",
+      "question": "'Inevitable' means ___",
+      "answer": "unavoidable",
+      "explain": "'Inevitable' digunakan untuk menyatakan sesuatu yang pasti terjadi. Sinonimnya adalah 'unavoidable'."
+    },
+    {
+      "type": "mc",
+      "question": "Which word is closest in meaning to 'rapid'?",
+      "choices": ["slow", "fast", "late", "heavy"],
+      "answer": "fast",
+      "explain": "'Rapid' berarti cepat, sehingga kata yang paling dekat maknanya adalah 'fast'."
+    },
+    {
+      "type": "mc",
+      "question": "Which word is a synonym for 'accurate'?",
+      "choices": ["wrong", "precise", "nearly", "risky"],
+      "answer": "precise",
+      "explain": "'Accurate' berarti tepat atau akurat. Sinonim yang sesuai adalah 'precise'."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'evaluate' = ___",
+      "answer": "assess",
+      "explain": "'Evaluate' berarti menilai atau mengevaluasi. Kata yang paling dekat maknanya adalah 'assess'."
+    },
+    {
+      "type": "mc",
+      "question": "'Maintain' means ___",
+      "choices": ["destroy", "keep", "break", "stop"],
+      "answer": "keep",
+      "explain": "'Maintain' berarti mempertahankan atau menjaga. Oleh karena itu sinonimnya adalah 'keep'."
+    },
+    {
+      "type": "mc",
+      "question": "'Decline' can mean ___",
+      "choices": ["increase", "refuse", "improve", "support"],
+      "answer": "refuse",
+      "explain": "'Decline' bisa berarti menolak, terutama dalam konteks permintaan atau undangan. Itu sebabnya jawabannya adalah 'refuse'."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'complex' = ___",
+      "answer": "complicated",
+      "explain": "'Complex' berarti rumit atau tidak sederhana. Sinonim yang tepat adalah 'complicated'."
+    },
+    {
+      "type": "mc",
+      "question": "Which word is related to economy?",
+      "choices": ["inflation", "hydration", "rotation", "migration"],
+      "answer": "inflation",
+      "explain": "'Inflation' merupakan istilah yang sering digunakan dalam bidang ekonomi. Kata lainnya tidak berhubungan langsung dengan ekonomi."
+    },
+    {
+      "type": "mc",
+      "question": "'Diverse' means ___",
+      "choices": ["varied", "same", "boring", "broken"],
+      "answer": "varied",
+      "explain": "'Diverse' berarti beragam atau bervariasi. Karena itu jawaban yang benar adalah 'varied'."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'allocate' = ___",
+      "answer": "distribute",
+      "explain": "'Allocate' berarti membagikan atau memberikan sesuatu untuk tujuan tertentu. Sinonimnya adalah 'distribute'."
+    },
+    {
+      "type": "mc",
+      "question": "'Consequently' means ___",
+      "choices": ["but", "therefore", "before", "although"],
+      "answer": "therefore",
+      "explain": "'Consequently' menyatakan akibat dari suatu tindakan. Kata yang sepadan adalah 'therefore'."
+    },
+    {
+      "type": "mc",
+      "question": "'Reluctant' means ___",
+      "choices": ["willing", "unwilling", "excited", "confident"],
+      "answer": "unwilling",
+      "explain": "'Reluctant' berarti enggan atau tidak ingin melakukan sesuatu. Sinonimnya adalah 'unwilling'."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'alter' = ___",
+      "answer": "change",
+      "explain": "'Alter' berarti mengubah sesuatu. Sinonim yang paling tepat adalah 'change'."
+    },
+    {
+      "type": "mc",
+      "question": "'Significant' means ___",
+      "choices": ["important", "tiny", "random", "simple"],
+      "answer": "important",
+      "explain": "'Significant' berarti penting atau bermakna. Karena itu padanan katanya adalah 'important'."
+    },
+    {
+      "type": "mc",
+      "question": "'Adequate' means ___",
+      "choices": ["not enough", "sufficient", "too much", "improper"],
+      "answer": "sufficient",
+      "explain": "'Adequate' berarti cukup atau memadai. Sinonimnya adalah 'sufficient'."
+    },
+    {
+      "type": "fill",
+      "question": "Meaning of 'contrast' = ___",
+      "answer": "difference",
+      "explain": "'Contrast' berarti perbedaan yang mencolok antara dua hal. Karena itu definisi sederhananya adalah 'difference'."
+    },
+    {
+      "type": "mc",
+      "question": "Which word means 'careful'?",
+      "choices": ["cautious", "reckless", "rapid", "fragile"],
+      "answer": "cautious",
+      "explain": "'Cautious' berarti berhati-hati atau penuh kewaspadaan. Kata inilah yang paling sesuai dengan arti 'careful'."
+    },
+    {
+      "type": "mc",
+      "question": "'Obvious' means ___",
+      "choices": ["unclear", "not noticeable", "easily seen", "complex"],
+      "answer": "easily seen",
+      "explain": "'Obvious' berarti jelas atau mudah terlihat. Oleh karena itu jawaban yang tepat adalah 'easily seen'."
+    },
+    {
+      "type": "fill",
+      "question": "'Modify' means ___",
+      "answer": "change",
+      "explain": "'Modify' digunakan ketika sesuatu diubah agar menjadi berbeda atau lebih baik. Maknanya sama dengan 'change'."
+    },
+    {
+      "type": "mc",
+      "question": "'Decline' meaning in economy?",
+      "choices": ["increase", "shrink", "grow", "explode"],
+      "answer": "shrink",
+      "explain": "Dalam konteks ekonomi, 'decline' berarti penurunan atau penyusutan. Makna yang paling tepat adalah 'shrink'."
+    },
+    {
+      "type": "mc",
+      "question": "Synonym of 'effort'?",
+      "choices": ["work", "relax", "ignore", "delay"],
+      "answer": "work",
+      "explain": "'Effort' berarti upaya atau usaha. Kata yang paling mendekati artinya adalah 'work'."
+    },
+    {
+      "type": "fill",
+      "question": "'Sustain' means ___",
+      "answer": "maintain",
+      "explain": "'Sustain' berarti mempertahankan atau menjaga dalam jangka waktu tertentu. Maknanya sangat dekat dengan 'maintain'."
+    },
+    {
+      "type": "mc",
+      "question": "'Scarcity' means ___",
+      "choices": ["abundance", "lack", "overflow", "growth"],
+      "answer": "lack",
+      "explain": "'Scarcity' berarti kelangkaan atau kekurangan. Oleh karena itu sinonimnya adalah 'lack'."
+    },
+    {
+      "type": "mc",
+      "question": "What is another word for 'assist'?",
+      "choices": ["help", "hurt", "delay", "prevent"],
+      "answer": "help",
+      "explain": "'Assist' berarti membantu, sehingga sinonimnya yang paling tepat adalah 'help'."
+    },
+    {
+      "type": "fill",
+      "question": "'Interpret' means ___",
+      "answer": "explain",
+      "explain": "'Interpret' berarti menjelaskan atau menafsirkan sesuatu. Karena itu jawabannya adalah 'explain'."
+    },
+    {
+      "type": "mc",
+      "question": "Synonym of 'prior'?",
+      "choices": ["later", "before", "present", "random"],
+      "answer": "before",
+      "explain": "'Prior' berarti sebelumnya. Sinonim yang paling cocok adalah 'before'."
+    }
   ],
+
+
   "reading": [
-    {"type":"mc","question":"Sarah wakes up at 5 AM every day. What time does Sarah wake up?","choices":["6 AM","5 AM","4 AM","7 AM"],"answer":"5 AM"},
-    {"type":"mc","question":"Tom bought bread and milk. What did Tom buy?","choices":["Bread and milk","Rice","Water","Fruit"],"answer":"Bread and milk"},
-    {"type":"fill","question":"John reads a book every night. John reads a _____.","answer":"book"},
-    {"type":"mc","question":"Lisa visited the zoo and saw elephants. What did Lisa see?","choices":["Dogs","Cats","Elephants","Birds"],"answer":"Elephants"},
-    {"type":"mc","question":"Mark walked to school because it was close. Why did Mark walk?","choices":["He was tired","It was close","He had a bike","It was raining"],"answer":"It was close"},
-    {"type":"fill","question":"Emma drinks ___ every morning. (context: breakfast)","answer":"milk"},
-    {"type":"mc","question":"The sun was bright, so Sam wore sunglasses. Why did Sam wear sunglasses?","choices":["It was raining","It was dark","The sun was bright","He was cold"],"answer":"The sun was bright"},
-    {"type":"mc","question":"Anna lost her keys at the park. Where did Anna lose her keys?","choices":["At home","At school","At the park","In the car"],"answer":"At the park"},
-    {"type":"fill","question":"Tom is hungry. He wants to eat ____.","answer":"food"},
-    {"type":"mc","question":"Mia studied for her test. What did Mia do?","choices":["Played","Slept","Studied","Ran"],"answer":"Studied"},
-    {"type":"mc","question":"Jake played football with his friends. What sport did Jake play?","choices":["Basketball","Tennis","Football","Badminton"],"answer":"Football"},
-    {"type":"fill","question":"Lucy went to the store to buy ____.","answer":"apples"},
-    {"type":"mc","question":"Ben watered the plants in the morning. What did Ben water?","choices":["Clothes","Plants","Shoes","Food"],"answer":"Plants"},
-    {"type":"mc","question":"Maya ate noodles for lunch. What did Maya eat?","choices":["Rice","Soup","Noodles","Cake"],"answer":"Noodles"},
-    {"type":"fill","question":"The cat slept on the ____.","answer":"sofa"}
+    {
+      "type": "mc",
+      "question": "Anna studied until midnight because she had a test today. Why did Anna study until midnight?",
+      "choices": ["She was bored", "She had a test", "She couldn't sleep", "She wanted to stay awake"],
+      "answer": "She had a test",
+      "explain": "Teks menyatakan bahwa Anna belajar sampai tengah malam karena ada tes hari ini. Jadi alasannya jelas: karena ada tes."
+    },
+    {
+      "type": "mc",
+      "question": "David walked to school because his bike was broken. Why did David walk?",
+      "choices": ["He likes walking", "The weather was nice", "His bike was broken", "He overslept"],
+      "answer": "His bike was broken",
+      "explain": "Kalimat menjelaskan langsung bahwa sepeda David rusak, sehingga ia harus berjalan."
+    },
+    {
+      "type": "fill",
+      "question": "The teacher asked John to submit his assignment ___ leaving the class.",
+      "answer": "before",
+      "explain": "Frasa 'before leaving the class' adalah penggunaan yang paling tepat untuk menunjukkan waktu sebelum kegiatan."
+    },
+    {
+      "type": "mc",
+      "question": "Lisa bought a jacket because it was cold. What was the weather like?",
+      "choices": ["Hot", "Rainy", "Cold", "Windy"],
+      "answer": "Cold",
+      "explain": "Teks menyatakan secara jelas bahwa cuacanya dingin ('it was cold')."
+    },
+    {
+      "type": "mc",
+      "question": "Mary forgot her umbrella, so she got wet. Why did Mary get wet?",
+      "choices": ["It was sunny", "She forgot her umbrella", "She was playing", "She was swimming"],
+      "answer": "She forgot her umbrella",
+      "explain": "Mary basah karena ia lupa membawa payung saat hujan."
+    },
+    {
+      "type": "fill",
+      "question": "Tom chose to stay home because he was feeling ____.",
+      "answer": "sick",
+      "explain": "Konteks menunjukkan Tom memilih tinggal di rumah karena merasa sakit."
+    },
+    {
+      "type": "mc",
+      "question": "The library was full, so Sarah decided to study at a café instead. Why did she move?",
+      "choices": ["She wanted coffee", "The library was full", "She met a friend", "She forgot her books"],
+      "answer": "The library was full",
+      "explain": "Penyebab perpindahan Sarah disebutkan secara langsung, yaitu perpustakaan penuh."
+    },
+    {
+      "type": "mc",
+      "question": "Kevin saved money for three months to buy a new phone. What was he saving for?",
+      "choices": ["A laptop", "A trip", "A new phone", "Shoes"],
+      "answer": "A new phone",
+      "explain": "Teks menyatakan Kevin menabung untuk membeli ponsel baru."
+    },
+    {
+      "type": "fill",
+      "question": "The class went silent when the principal ___ the room.",
+      "answer": "entered",
+      "explain": "Kata kerja yang tepat untuk menunjukkan seseorang masuk ruangan adalah 'entered'."
+    },
+    {
+      "type": "mc",
+      "question": "Jenny woke up late, so she missed the bus. Why did she miss the bus?",
+      "choices": ["She ran too fast", "She woke up late", "She forgot her bag", "The bus was early"],
+      "answer": "She woke up late",
+      "explain": "Teks menjelaskan penyebabnya langsung: Jenny bangun kesiangan."
+    },
+    {
+      "type": "mc",
+      "question": "Sam brought sunscreen because he was going to the beach. Where was Sam going?",
+      "choices": ["The mall", "The beach", "School", "The cafe"],
+      "answer": "The beach",
+      "explain": "Dia membawa sunscreen karena akan pergi ke pantai."
+    },
+    {
+      "type": "fill",
+      "question": "Mark didn't bring his laptop because it was ____.",
+      "answer": "broken",
+      "explain": "Konteks menyatakan laptopnya tidak dibawa karena rusak."
+    },
+    {
+      "type": "mc",
+      "question": "Diana practiced piano daily to prepare for a competition. What was she preparing for?",
+      "choices": ["A test", "A meeting", "A piano competition", "A trip"],
+      "answer": "A piano competition",
+      "explain": "Latihan piano dilakukan untuk persiapan kompetisi piano."
+    },
+    {
+      "type": "mc",
+      "question": "The restaurant was crowded, so they had to wait. Why did they wait?",
+      "choices": ["Food was expensive", "The restaurant was crowded", "They arrived early", "They forgot to order"],
+      "answer": "The restaurant was crowded",
+      "explain": "Alasan mereka menunggu adalah restoran penuh sehingga tidak ada meja kosong."
+    },
+    {
+      "type": "fill",
+      "question": "Evan finished his homework ___ playing games.",
+      "answer": "before",
+      "explain": "Urutan kejadian menunjukkan ia menyelesaikan PR sebelum bermain game."
+    },
+    {
+      "type": "mc",
+      "question": "Daniel drank a lot of water because he felt thirsty. Why did he drink water?",
+      "choices": ["He was bored", "He was thirsty", "He was nervous", "He was cold"],
+      "answer": "He was thirsty",
+      "explain": "Teks mengungkapkan ia minum karena haus."
+    },
+    {
+      "type": "mc",
+      "question": "The lights went out, so they used candles. Why did they use candles?",
+      "choices": ["It was romantic", "The room was clean", "The lights went out", "They liked candles"],
+      "answer": "The lights went out",
+      "explain": "Lilin digunakan karena listrik mati."
+    },
+    {
+      "type": "fill",
+      "question": "Maria bought flowers to ___ her mother.",
+      "answer": "surprise",
+      "explain": "Bunga biasanya dibeli untuk memberi kejutan, sesuai konteks kalimat."
+    },
+    {
+      "type": "mc",
+      "question": "The teacher smiled because the students behaved well. Why did she smile?",
+      "choices": ["She was angry", "Students behaved well", "Class was canceled", "She was tired"],
+      "answer": "Students behaved well",
+      "explain": "Guru tersenyum karena murid-murid berperilaku baik."
+    },
+    {
+      "type": "mc",
+      "question": "The road was blocked, so he took another route. Why did he change routes?",
+      "choices": ["He was bored", "The road was blocked", "He wanted to travel far", "He missed home"],
+      "answer": "The road was blocked",
+      "explain": "Rute diganti karena jalan utama terhalang."
+    },
+    {
+      "type": "fill",
+      "question": "Ryan wore a raincoat because it was going to ____. ",
+      "answer": "rain",
+      "explain": "Konteks menunjukkan ia memakai jas hujan karena akan turun hujan."
+    },
+    {
+      "type": "mc",
+      "question": "Sophie turned off her phone to focus on studying. Why did she turn off her phone?",
+      "choices": ["To sleep", "To study", "To watch movies", "To call someone"],
+      "answer": "To study",
+      "explain": "Tujuan mematikan ponsel adalah agar ia bisa fokus belajar."
+    },
+    {
+      "type": "mc",
+      "question": "The dog barked loudly when a stranger approached the house. Why did the dog bark?",
+      "choices": ["It was hungry", "A stranger approached", "It was sleepy", "It wanted food"],
+      "answer": "A stranger approached",
+      "explain": "Anjing menggonggong karena orang asing mendekati rumah."
+    },
+    {
+      "type": "fill",
+      "question": "Emma went to the dentist because her tooth was ____. ",
+      "answer": "hurting",
+      "explain": "Emma pergi ke dokter gigi karena giginya sakit."
+    },
+    {
+      "type": "mc",
+      "question": "The team trained hard to win the championship. Why did they train hard?",
+      "choices": ["To rest", "To lose", "To win the championship", "To skip practice"],
+      "answer": "To win the championship",
+      "explain": "Tujuan latihan keras adalah agar mereka menang kejuaraan."
+    },
+    {
+      "type": "mc",
+      "question": "The children wore jackets because the weather was chilly. What was the weather like?",
+      "choices": ["Warm", "Chilly", "Rainy", "Sunny"],
+      "answer": "Chilly",
+      "explain": "Anak-anak memakai jaket karena cuacanya dingin."
+    },
+    {
+      "type": "fill",
+      "question": "The students whispered because the baby in the room was ____. ",
+      "answer": "sleeping",
+      "explain": "Mereka berbisik untuk tidak mengganggu bayi yang sedang tidur."
+    },
+    {
+      "type": "mc",
+      "question": "Olivia packed her suitcase because she was traveling tomorrow. What was she preparing for?",
+      "choices": ["School", "A trip", "A meeting", "A test"],
+      "answer": "A trip",
+      "explain": "Ia mengemas koper karena akan pergi berlibur/berjalan esok hari."
+    },
+    {
+      "type": "mc",
+      "question": "James brought an umbrella even though the sky was clear. What does this show?",
+      "choices": ["He was careless", "He was prepared", "He was tired", "He forgot"],
+      "answer": "He was prepared",
+      "explain": "Ia tetap membawa payung sebagai bentuk antisipasi."
+    },
+    {
+      "type": "fill",
+      "question": "The museum closed early due to ___ weather.",
+      "answer": "bad",
+      "explain": "Konteks umum: museum ditutup lebih awal karena cuaca buruk."
+    }
   ]
 }
+

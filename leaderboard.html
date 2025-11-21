@@ -8,20 +8,41 @@
   <script defer src="assets/js/leaderboard.js"></script>
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <h1>Leaderboard</h1>
-      <p>Top 10 berdasarkan total poin</p>
-    </header>
+  <main class="container leaderboard-container">
+  <header class="hero">
+    <h1>Leaderboard</h1>
+    <p>Top 10 berdasarkan total poin</p>
+  </header>
 
-    <section class="card">
-      <ol id="leaderboard-list" class="leaderboard-list"></ol>
+  <section class="leaderboard-card">
+    <ol id="leaderboard-list" class="leaderboard-list"></ol>
 
-      <div class="leaderboard-actions">
-        <button id="clear-leaderboard" class="btn-ghost">Clear Leaderboard</button>
-        <a class="btn-outline" href="index.html">Back</a>
-      </div>
-    </section>
-  </main>
+    <div class="leaderboard-actions">
+      <button id="clear-leaderboard" class="btn-ghost">Clear Leaderboard</button>
+      <a class="btn-outline" href="index.html">Back</a>
+    </div>
+  </section>
+</main>
 </body>
 </html>
+
+<script>
+  // Load mode from localStorage
+  const savedMode = localStorage.getItem("theme");
+  if (savedMode === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+
+  const toggle = document.getElementById("dark-toggle");
+
+  toggle.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "☀️" : "🌙";
+  });
+
+  // Set initial icon
+  if (savedMode === "dark") {
+    toggle.textContent = "☀️";
+  }
+</script>

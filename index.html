@@ -7,28 +7,77 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">EduLink</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="quiz.html?category=grammar">Grammar</a>
+    <a href="quiz.html?category=vocab">Vocabulary</a>
+    <a href="quiz.html?category=reading">Reading</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="admin.html">Admin</a>
+    <button id="dark-toggle">🌙</button>
+  </div>
+</nav>
+
   <main class="container">
     <header class="hero">
-      <h1 class="brand">🎉 EduLink 🎉</h1>
+      <h1 class="brand">🌊 EduLink 🌊</h1>
       <p class="tag">TKA & Pemula — Grammar · Reading · Vocabulary 📘</p>
-
     </header>
 
     <section class="menu">
-      <a class="card" href="quiz.html?category=grammar">📚 Grammar</a>
-      <a class="card" href="quiz.html?category=vocab">🧠 Vocabulary</a>
-      <a class="card" href="quiz.html?category=reading">📖 Reading</a>
-
+      <a href="quiz.html?category=grammar" class="card category-btn">📄 Grammar</a>
+      <a href="quiz.html?category=vocab" class="card category-btn">📚 Vocabulary</a>
+      <a href="quiz.html?category=reading" class="card category-btn">📖 Reading</a>
     </section>
 
     <section class="utility">
       <a class="btn-outline" href="leaderboard.html">🏆 Leaderboard</a>
-      <a class="btn-outline" href="admin.html">🛠️ Admin (Tambah Soal)</a>
-      <a class="btn-outline" href="/mnt/data/TEKNIS FESTIKA.pdf" target="_blank">📄 Panduan Teknis FESTIKA</a>
-
+      <a class="btn-outline" href="admin.html">🛠️ Admin</a>
     </section>
 
+    
     <footer class="foot">🌟 AREK AI FESTIKA 2025 • Farrell & Resti. All Right Reserved 🌟</footer>
   </main>
 </body>
 </html>
+
+<script>
+  /* ============================
+        DARK MODE HANDLER
+  ============================ */
+  const savedMode = localStorage.getItem("theme");
+  if (savedMode === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+
+  const toggle = document.getElementById("dark-toggle");
+
+  toggle?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "☀️" : "🌙";
+  });
+
+  // Set initial icon
+  if (toggle) {
+    toggle.textContent = savedMode === "dark" ? "☀️" : "🌙";
+  }
+
+
+  /* ============================
+        CATEGORY HIGHLIGHT
+  ============================ */
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get("category");
+
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    if (btn.href.includes(cat)) {
+      btn.classList.add("selected");
+    }
+  });
+</script>
