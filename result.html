@@ -3,48 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <title>EduLink | Result</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/result.js"></script>
+
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <main class="container">
-    <header class="hero">
-      <h1>Hasil Kuis</h1>
+
+    <!-- HEADER -->
+    <header class="hero" style="margin-bottom: 18px;">
+      <h1 style="font-size: 32px; font-weight: 700;">Hasil Kuis</h1>
     </header>
 
-    <section class="card">
-      <h2 id="score-text">Score: 0 / 0</h2>
-      <h3 id="point-text">Points: 0</h3>
+    <!-- RESULT CARD -->
+    <section class="result-card">
+  <h2 class="result-title" id="score-text">Correct Answers: 0 / 0</h2>
+  <h3 class="result-subtitle" id="point-text">Total Points: 0</h3>
 
-      <div id="answers-review" class="answers-review"></div>
+  <div id="answers-review"></div>
 
-      <div class="result-actions">
-        <a class="btn" href="index.html">Back to Home</a>
-        <a class="btn-outline" id="save-leaderboard-btn" href="#">Save to Leaderboard</a>
-      </div>
-    </section>
+  <div class="result-actions">
+    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn-outline" id="save-leaderboard-btn" href="#">Save to Leaderboard</a>
+  </div>
+</section>
+
   </main>
+
+  <!-- DARK MODE TOGGLE SCRIPT -->
+  <script>
+    const savedMode = localStorage.getItem("theme");
+    if (savedMode === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+
+    const toggle = document.getElementById("dark-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        toggle.textContent = isDark ? "☀️" : "🌙";
+      });
+
+      if (savedMode === "dark") toggle.textContent = "☀️";
+    }
+  </script>
 </body>
 </html>
-
-<script>
-  // Load mode from localStorage
-  const savedMode = localStorage.getItem("theme");
-  if (savedMode === "dark") {
-    document.documentElement.classList.add("dark");
-  }
-
-  const toggle = document.getElementById("dark-toggle");
-
-  toggle.addEventListener("click", () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggle.textContent = isDark ? "☀️" : "🌙";
-  });
-
-  // Set initial icon
-  if (savedMode === "dark") {
-    toggle.textContent = "☀️";
-  }
-</script>
