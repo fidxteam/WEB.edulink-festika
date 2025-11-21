@@ -47,37 +47,56 @@
 </html>
 
 <script>
-  /* ============================
-        DARK MODE HANDLER
-  ============================ */
+// DARK MODE
+const toggle = document.getElementById("dark-toggle");
+if (toggle) {
   const savedMode = localStorage.getItem("theme");
   if (savedMode === "dark") {
     document.documentElement.classList.add("dark");
+    toggle.textContent = "☀️";
+  } else {
+    toggle.textContent = "🌙";
   }
 
-  const toggle = document.getElementById("dark-toggle");
-
-  toggle?.addEventListener("click", () => {
+  toggle.addEventListener("click", () => {
     const isDark = document.documentElement.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
     toggle.textContent = isDark ? "☀️" : "🌙";
   });
+}
 
-  // Set initial icon
-  if (toggle) {
-    toggle.textContent = savedMode === "dark" ? "☀️" : "🌙";
+// CATEGORY HIGHLIGHT
+const params = new URLSearchParams(window.location.search);
+const cat = params.get("category");
+
+document.querySelectorAll(".category-btn").forEach(btn => {
+  if (btn.href.includes(cat)) {
+    btn.classList.add("selected");
   }
+});
 
-
-  /* ============================
-        CATEGORY HIGHLIGHT
-  ============================ */
-  const params = new URLSearchParams(window.location.search);
-  const cat = params.get("category");
-
-  document.querySelectorAll(".category-btn").forEach(btn => {
-    if (btn.href.includes(cat)) {
-      btn.classList.add("selected");
-    }
+// LEADERBOARD BUTTONS
+const clearBtn = document.getElementById("clear-leaderboard");
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    localStorage.removeItem("leaderboard");
+    location.reload();
   });
+}
+
+// SAVE LEADERBOARD (result page)
+const saveBtn = document.getElementById("save-leaderboard-btn");
+if (saveBtn) {
+  saveBtn.addEventListener("click", () => {
+    alert("Saved!");
+  });
+}
+
+// IMPORT - ADMIN PAGE
+const importBtn = document.getElementById("import-btn");
+if (importBtn) {
+  importBtn.addEventListener("click", () => {
+    console.log("Import clicked!");
+  });
+}
 </script>
