@@ -1,158 +1,129 @@
-📘 EduLink — English Quiz Web App
+# 📘 EduLink — English Quiz Web App
 
-A lightweight, fully client-side English Test Platform built for FESTIKA 2025.
-EduLink menyediakan 3 kategori latihan: Grammar, Vocabulary, dan Reading, lengkap dengan timer, skoring, review jawaban, dan leaderboard.
-
-Website ini dibuat untuk pembelajaran cepat dan kompetisi TKA/Pemula, dengan fokus pada kepraktisan, UX modern, dan dapat dijalankan offline maupun online.
-
+A lightweight, fully client-side English Test Platform for FESTIKA 2025.  
+Mendukung 3 kategori latihan: **Grammar, Vocabulary, Reading**, lengkap dengan timer, scoring, review jawaban, leaderboard, dan admin panel.  
+Dapat berjalan **offline** maupun **online**.
 
 ---
 
-🚀 Fitur Utama
-✅ 1. Quiz Engine (Grammar, Vocabulary, Reading)
-30 soal per kategori
-Tipe soal: multiple-choice & fill in the blank
-Timer 40 detik per soal
-Penilaian otomatis
-Animasi transisi antar soal
-Warna jawaban (correct/wrong/selected)
+## ✔️ Fitur Utama
 
-✅ 2. Dark Mode (Persisted)
-Mode terang/gelap
-Tersimpan ke localStorage
-Tersinkron di semua halaman
+### 1️⃣ Quiz Engine
+- 30 soal per kategori  
+- Tipe soal: multiple-choice & fill in the blank  
+- Timer 40 detik per soal  
+- Penilaian otomatis  
+- Animasi transisi antar soal  
+- Highlight jawaban (correct / wrong / selected)
 
-✅ 3. Leaderboard Lokal
-Menyimpan:
-Nama peserta
-Total poin
-Skor benar
-Waktu penyelesaian
+### 2️⃣ Dark Mode
+- Toggle dark/light  
+- Tersimpan otomatis (localStorage)  
+- Sinkron di seluruh halaman
 
-Menampilkan Top 10
-Bisa dihapus (Clear Leaderboard)
+### 3️⃣ Leaderboard
+- Menyimpan Top 10  
+- Nama + total poin  
+- Clear leaderboard tersedia
 
+### 4️⃣ Admin Panel
+- Import soal JSON  
+- Export seluruh soal  
+- Reset ke default seed  
+- Preview soal per kategori  
+- Editing/hapus soal (opsional)
 
-✅ 4. Admin Page
-Halaman admin dapat:
-Import file JSON soal baru
-Export seluruh soal dalam format JSON
-Reset soal kembali ke default
-Melihat preview soal tiap kategori
-Mengedit dan menghapus soal (opsional)
-
-Contoh struktur JSON:
+Contoh JSON:
+```json
 {
   "grammar": [
-    {
-      "type": "mc",
-      "question": "...",
-      "choices": ["a","b","c"],
-      "answer": "a",
-      "explanation": "..."
-    }
+    { "type": "mc", "question": "...", "choices": ["a","b","c"], "answer": "a", "explanation": "..." }
   ],
-  "vocab": [...],
-  "reading": [...]
+  "vocab": [],
+  "reading": []
 }
+```
 
-✅ 5. Online + Local Mode
-EduLink mendukung:
-Mode Offline: seluruh data soal tersimpan di localStorage
-Mode Online: soal diambil dari /data.json (Vercel hosting)
-Jika koneksi gagal → otomatis fallback ke soal lokal.
+### 5️⃣ Online + Offline Mode
 
-Logic pemilihan soal:
-if (online JSON tersedia) → gunakan online
-else → gunakan localStorage
-else → gunakan seed default
+Offline: data dari localStorage
+Online: otomatis load data.json dari server
+Jika gagal → fallback ke lokal
+Jika lokal kosong → pakai seed default
 
-✅ 6. Responsiveness
-Situs sudah dioptimalkan untuk:
-Android
-iPhone
+### 6️⃣ Responsiveness
+Optimized untuk:
+Android / iPhone
 Tablet
 Desktop / Laptop
 
-Dengan layout:
+Termasuk:
 Navbar collapse
-Card wrap otomatis
-Teks menyesuaikan layar kecil
+Layout adaptif
+Font Montserrat
 
 ---
 
-📂 Struktur Proyek
-/
-├── index.html
-├── quiz.html
-├── result.html
-├── leaderboard.html
-├── admin.html
-├── assets/
-│   ├── css/style.css
-│   ├── js/
-│   │   ├── quiz.js
-│   │   ├── data.js
-│   │   ├── admin.js
-│   │   ├── leaderboard.js
-│   │   └── result.js
-│   └── img/
-└── data.json (optional, jika host online)
+### 📂 Struktur Proyek
+index.html
+quiz.html
+result.html
+leaderboard.html
+admin.html
+assets/
+ ├── css/style.css
+ └── js/
+      quiz.js
+      data.js
+      admin.js
+      result.js
+      leaderboard.js
+soalbaru.json (berisi soal fix demo)
 
 ---
 
-🛠️ Cara Menjalankan
-1. Lokal (offline)
-Cukup buka index.html di browser:
-file:///.../EduLink/index.html
-
-3. Deploy Online (Vercel)
-1. Upload folder ke GitHub
-2. Deploy via Vercel
-3. Tambahkan data.json untuk soal online (opsional)
-4. EduLink siap digunakan semua peserta
+### ▶️ Cara Menjalankan
+1. Buka index.html (mode offline).
+2. Deploy ke Vercel untuk mode online.
+3. (Opsional) Upload data.json sebagai soal online.
+4. Aplikasi langsung siap dipakai.
 
 ---
 
-🎮 Cara Menambah Soal
-Masuk ke:
+### 🕹️ Cara Menambah Soal
+Masuk:
 /admin.html
-Lalu:
-Upload berkas JSON baru
-Atau export-then-edit lalu import lagi
-Atau reset ke seed default
-Semua perubahan hanya berlaku pada:
-localStorage → tidak mengubah file server
+Upload JSON baru
+Export/edit/import ulang
+Reset ke default (jika perlu)
+
+Catatan: perubahan hanya disimpan di localStorage, tidak mengubah file server.
+
 
 ---
 
-🧪 Preview Soal
-Admin dapat melihat daftar soal:
-Per kategori
-Lengkap dengan tipe, pilihan, jawaban, dan penjelasannya
-Mode mobile sudah diperbaiki agar tidak overflow.
+### 👀 Preview Soal
+Menampilkan daftar soal lengkap
+Mendukung tipe, pilihan, jawaban, dan penjelasan
+Responsive di mobile
 
 ---
 
-🎨 UI Highlights
-Modern neumorphic card design
+### 🎨 UI Highlights
+Neumorphic card design
 Smooth hover animation
-Dark/light mode toggling
+Dark/light mode
 Button ripple
-Clean typography (Montserrat)
+Montserrat font
 
+---
+
+### 📝 Lisensi
+Dibuat untuk kegiatan FESTIKA 2025 dan bebas digunakan untuk keperluan edukasi.
 
 
 ---
 
-📄 Lisensi
-Proyek ini dibuat untuk kebutuhan FESTIKA 2025 dan dapat digunakan secara bebas untuk keperluan edukasi.
-
----
-
-✨ Pembuat
+###👥 Pembuat
 Farrell Athar R — rapid coding from AI to web
-Resti Kusumawati — english quiz idea inventor & final logbook result consolidation
-
----
-
+Resti Kusumawati — English quiz idea inventor & final logbook result consolidation
