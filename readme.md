@@ -85,16 +85,18 @@ soalbaru.json (berisi soal fix demo)
 ---
 
 ### ▶️ Cara Menjalankan
+```
 1. Buka index.html (mode offline).
 2. Deploy ke Vercel untuk mode online.
 3. (Opsional) Upload data.json sebagai soal online.
 4. Aplikasi langsung siap dipakai.
+```
 
 ---
 
 ### 🕹️ Cara Menambah Soal
 Masuk:
-/admin.html
+```/admin.html```
 Upload JSON baru
 Export/edit/import ulang
 Reset ke default (jika perlu)
@@ -128,4 +130,4 @@ Dibuat untuk kegiatan FESTIKA 2025 dan bebas digunakan untuk keperluan edukasi.
 
 ###👥 Pembuat
 Farrell Athar R — rapid coding from AI to web
-Resti Kusumawati — English quiz idea inventor & final logbook result consolidation
+Resti Kusumawati — english quiz idea inventor & final logbook result consolidation
