@@ -128,6 +128,6 @@ Dibuat untuk kegiatan FESTIKA 2025 dan bebas digunakan untuk keperluan edukasi.
 
 ---
 
-###👥 Pembuat
+### 👥 Pembuat
 Farrell Athar R — rapid coding from AI to web
 Resti Kusumawati — english quiz idea inventor & final logbook result consolidation
