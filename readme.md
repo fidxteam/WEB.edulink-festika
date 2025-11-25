@@ -65,6 +65,7 @@ Font Montserrat
 ---
 
 ### 📂 Struktur Proyek
+```
 index.html
 quiz.html
 result.html
@@ -79,6 +80,7 @@ assets/
       result.js
       leaderboard.js
 soalbaru.json (berisi soal fix demo)
+```
 
 ---
 
